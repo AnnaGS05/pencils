@@ -1,0 +1,8 @@
+CANVAS_WIDTH = 640
+CANVAS_HEIGHT = 480
+TITLE = "Коробка с карандашами!"
+CM = 20
+PENCIL_WIDTH = 3 * CM
+PENCIL_CONE = 4 * CM
+GAPE = 10
+
