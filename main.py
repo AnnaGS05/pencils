@@ -2,7 +2,7 @@
 
 from tkinter import *  # Используем возможности модуля tkinter.
 
-from pencil import Pencil
+from pencil import Pencil, setup
 from settings import *  # Настройки выносим в отдельный файл.
 
 window = Tk()  # Создаем окно.
@@ -24,8 +24,8 @@ pencils =  [  # Список кортежей с описанием каранд
 
 def draw_pencils(name):  # Объявление функции (definition). Параметр (name).
     print(name)
-    pencils_filtered = list(filter(lambda p: p[1] >= 5 and p[1] <= 15, pencils))
-    print(len(pencils_filtered))
+    pencils_filtered = list(filter(lambda p: PENCIL_MIN_LENGTH <= p[1] <= PENCIL_MAX_LENGTH, pencils))
+    setup(len(pencils_filtered))
     for pencil in pencils_filtered:  # Для каждого карандаша в наборе.
         color, length, sharpness = pencil  # Извлекаем переменные из кортежа.
         pencil = Pencil(canvas, color, length, sharpness)

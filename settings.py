@@ -4,5 +4,7 @@ TITLE = "Коробка с карандашами!"
 CM = 20
 PENCIL_WIDTH = 3 * CM
 PENCIL_CONE = 4 * CM
+PENCIL_MAX_LENGTH = 15
+PENCIL_MIN_LENGTH = 5
 GAPE = 10
 
